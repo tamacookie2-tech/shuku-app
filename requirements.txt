@@ -1,0 +1,4 @@
+streamlit==1.*
+astral==3.*
+skyfield==1.*
+jplephem==2.*
