@@ -11,7 +11,14 @@ st.caption("二十八宿→27宿（牛→女置換）、固定キャリブレー
 st.markdown("### 単日計算")
 col1, col2 = st.columns([2,1])
 with col1:
-    day = st.date_input("判定する日付", value=date(1961, 9, 12), key="single_date")
+    day = st.date_input(
+    "判定する日付",
+    value=date(1961, 9, 12),
+    min_value=date(1900, 1, 1),
+    max_value=date(2050, 12, 31),
+    key="single_date",
+)
+
 with col2:
     run_single = st.button("計算する", type="primary")
 
